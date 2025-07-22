@@ -1,0 +1,62 @@
+{
+  "organization": {
+    "name": "Thila Coloma",
+    "description": "Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.",
+    "location": "Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.",
+    "founded": 1975,
+    "memberCount": 400,
+    "ranking": "5de grootste scoutsgroep van Vlaanderen",
+    "city": "Mechelen",
+    "logo": "assets/images/Logo_TC_ WIT.png"
+  },
+  "navigation": [
+    {
+      "id": "thilala",
+      "title": "Thilala",
+      "icon": "assets/images/icons/Asset 11thilala.svg",
+      "link": "pages/thilala.html",
+      "color": "var(--dark-color)",
+      "order": 1
+    },
+    {
+      "id": "stamhoofd",
+      "title": "Stamhoofd",
+      "icon": "assets/images/icons/Asset 1stamhoofd.svg",
+      "link": "#stamhoofd",
+      "color": "#362256",
+      "order": 2
+    },
+    {
+      "id": "kalender",
+      "title": "Kalender",
+      "icon": "assets/images/icons/Asset 12agenda.svg",
+      "link": "#kalender",
+      "color": "var(--pink-color)",
+      "order": 3
+    },
+    {
+      "id": "takken",
+      "title": "Takken",
+      "icon": "assets/images/icons/Asset 7takken.svg",
+      "link": "#takken",
+      "color": "#7CA687",
+      "order": 4
+    },
+    {
+      "id": "verhuur",
+      "title": "Verhuur",
+      "icon": "assets/images/icons/Asset 13verhuur.svg",
+      "link": "#verhuur",
+      "color": "#314022",
+      "order": 5
+    },
+    {
+      "id": "meer",
+      "title": "Meer",
+      "icon": "assets/images/icons/Asset 19meer.svg",
+      "link": "#meer",
+      "color": "rgb(8, 24, 4)",
+      "order": 6
+    }
+  ]
+}
