@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender - Thila Coloma - Scoutsgroep Mechelen</title>
+    <meta name="description" content="Overzicht van alle vergaderingen, evenementen en kampen bij Thila Coloma. Blijf op de hoogte van alle activiteiten.">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rae0xxq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <div class="simple-header-content">
+            <a href="../index.html" class="nav-icon" title="Home">
+                <img src="../assets/images/Logo_TC_KLEUR.png" alt="Home">
+            </a>
+            <nav class="simple-nav">
+                <a href="thilala.html" class="nav-icon" title="Thilala">
+                    <img src="../assets/images/icons/Asset 11thilala.svg" alt="Thilala">
+                </a>
+                <a href="stamhoofd.html" class="nav-icon" title="Stamhoofd">
+                    <img src="../assets/images/icons/Asset 1stamhoofd.svg" alt="Stamhoofd">
+                </a>
+                <a href="kalender.html" class="nav-icon active" title="Kalender">
+                    <img src="../assets/images/icons/Asset 12agenda.svg" alt="Kalender">
+                </a>
+                <a href="takken.html" class="nav-icon" title="Takken">
+                    <img src="../assets/images/icons/Asset 7takken.svg" alt="Takken">
+                </a>
+                <a href="verhuur.html" class="nav-icon" title="Verhuur">
+                    <img src="../assets/images/icons/Asset 13verhuur.svg" alt="Verhuur">
+                </a>
+            </nav>
+            <a href="meer.html" class="nav-icon nav-meer" title="Meer">
+                <img src="../assets/images/icons/Asset 19meer.svg" alt="Meer">
+            </a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-section">
+            <h2>Komende Evenementen</h2>
+            <p class="section-intro">
+                Hier vind je een overzicht van alle <span>kampen</span>, <span>activiteiten</span> en <span>vergaderingen</span>. Vergeet niet om je op tijd in te schrijven!
+            </p>
+            
+            <div id="kampen-container" class="grid-2">
+                <!-- Kampen worden hier dynamisch geladen -->
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Wekelijkse Vergaderingen</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-clock"></i> Tijdstip</h3>
+                        <p>Elke <span>zaterdag</span> van <strong>14:00 tot 17:00</strong></p>
+                        <p>Verzamelen om 13:45 aan de lokalen</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-map-marker-alt"></i> Locatie</h3>
+                        <p><span>Scoutslokalen Thila Coloma</span></p>
+                        <p>Jubellaan / Geerdegemstraat<br>Mechelen</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Afwezigheid</h3>
+                        <p>Kan je niet komen? <span>Meld dit tijdig</span> aan je leiding via het stamhoofd.</p>
+                        <a href="https://stamhoofd.thilacoloma.be/afwezigheid" class="btn btn-primary" target="_blank">Afwezigheid melden</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Jaarkalender 2025</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Belangrijke Data 2025</h3>
+                    <div class="calendar-events">
+                        <div class="calendar-month">
+                            <h4>Maart</h4>
+                            <ul>
+                                <li><strong>15-16 maart:</strong> Weekendkamp Kapoenen</li>
+                                <li><strong>22 maart:</strong> Ouderavond</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-month">
+                            <h4>April</h4>
+                            <ul>
+                                <li><strong>18-21 april:</strong> Paaskamp Welpen</li>
+                                <li><strong>26 april:</strong> Groepsactiviteit</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-month">
+                            <h4>Mei</h4>
+                            <ul>
+                                <li><strong>10-11 mei:</strong> Scoutsbadges dag</li>
+                                <li><strong>24 mei:</strong> Communicantenkamp</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-month">
+                            <h4>Juli</h4>
+                            <ul>
+                                <li><strong>5-12 juli:</strong> Zomerkamp Jonggivers</li>
+                                <li><strong>12-19 juli:</strong> Zomerkamp Givers</li>
+                                <li><strong>19-26 juli:</strong> Zomerkamp Welpen</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-month">
+                            <h4>Augustus</h4>
+                            <ul>
+                                <li><strong>2-9 augustus:</strong> Roverskamp</li>
+                                <li><strong>30 augustus:</strong> Start nieuw scoutsjaar</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-month">
+                            <h4>September</h4>
+                            <ul>
+                                <li><strong>13 september:</strong> Inschrijvingsdag nieuwe leden</li>
+                                <li><strong>27 september:</strong> Groepsfeest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Praktische Info Kampen</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-file-medical"></i> Medische Fiche</h3>
+                        <p>Voor elk kamp is een <span>medische fiche</span> verplicht. Deze moet volledig ingevuld worden door de ouders.</p>
+                        <a href="https://stamhoofd.thilacoloma.be/medische-fiche" class="btn btn-primary" target="_blank">Download medische fiche</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-credit-card"></i> Betalingen</h3>
+                        <p>Alle betalingen gebeuren via <span>bankoverschrijving</span> naar rekeningnummer BE12 3456 7890 1234 met vermelding van naam en activiteit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-suitcase"></i> Paklijst</h3>
+                        <p>Een gedetailleerde <span>paklijst</span> wordt enkele weken voor elk kamp verstuurd via email en stamhoofd.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-phone"></i> Tijdens kampen</h3>
+                        <p>Noodcontact tijdens kampen:<br>
+                        <strong>Peter Vandenberghe:</strong> +32 15 12 34 50<br>
+                        <strong>Marina Willems:</strong> +32 15 12 34 51</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Thila Coloma Mechelen</p>
+                <p>Jubellaan / Geerdegemstraat</p>
+                <p>Email: info@thilacoloma.be</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sociale Media</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <a href="https://stamhoofd.thilacoloma.be" target="_blank">Stamhoofd</a>
+                <a href="meer.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Thila Coloma Mechelen</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load evenementen data and display
+        async function loadEvenementen() {
+            try {
+                const response = await fetch('../data/site-config.json');
+                const data = await response.json();
+                const kampenContainer = document.getElementById('kampen-container');
+                
+                data.evenementen.forEach(event => {
+                    const startDate = new Date(event.datum);
+                    const endDate = event.eindDatum ? new Date(event.eindDatum) : null;
+                    const deadlineDate = new Date(event.deadline);
+                    const today = new Date();
+                    
+                    // Alleen toekomstige evenementen tonen
+                    if (startDate >= today) {
+                        const eventCard = document.createElement('div');
+                        eventCard.className = 'event-card card';
+                        
+                        eventCard.innerHTML = `
+                            <div class="card-content">
+                                <div class="event-type">${event.type}</div>
+                                <h3>${event.titel}</h3>
+                                <div class="event-details">
+                                    <div class="event-date">
+                                        <i class="fas fa-calendar"></i>
+                                        ${startDate.toLocaleDateString('nl-BE')}
+                                        ${endDate ? ' - ' + endDate.toLocaleDateString('nl-BE') : ''}
+                                    </div>
+                                    <div class="event-price">
+                                        <i class="fas fa-euro-sign"></i>
+                                        €${event.prijs}
+                                    </div>
+                                    <div class="event-deadline">
+                                        <i class="fas fa-clock"></i>
+                                        Inschrijven voor ${deadlineDate.toLocaleDateString('nl-BE')}
+                                    </div>
+                                    <div class="event-tak">
+                                        <i class="fas fa-users"></i>
+                                        ${event.tak.charAt(0).toUpperCase() + event.tak.slice(1)}
+                                    </div>
+                                </div>
+                                <p>${event.beschrijving}</p>
+                                <div class="event-actions">
+                                    <a href="${event.inschrijving}" class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-user-plus"></i> Inschrijven
+                                    </a>
+                                    <a href="${event.medischeFiche}" class="btn btn-secondary" target="_blank">
+                                        <i class="fas fa-file-medical"></i> Medische fiche
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                        
+                        kampenContainer.appendChild(eventCard);
+                    }
+                });
+                
+                // Als er geen toekomstige evenementen zijn
+                if (kampenContainer.children.length === 0) {
+                    kampenContainer.innerHTML = `
+                        <div class="card" style="grid-column: 1 / -1;">
+                            <div class="card-content" style="text-align: center;">
+                                <h3>Geen komende evenementen</h3>
+                                <p>Er zijn momenteel geen evenementen gepland. Hou onze nieuwsberichten in de gaten voor updates!</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading evenementen:', error);
+            }
+        }
+        
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadEvenementen);
+    </script>
+
+    <style>
+        .calendar-events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .calendar-month h4 {
+            color: var(--primary-color);
+            font-family: var(--font-bold);
+            margin-bottom: var(--spacing-sm);
+            padding-bottom: var(--spacing-xs);
+            border-bottom: 2px solid var(--gold-color);
+        }
+        
+        .calendar-month ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .calendar-month li {
+            padding: var(--spacing-xs) 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .calendar-month li:last-child {
+            border-bottom: none;
+        }
+        
+        .event-tak {
+            text-transform: capitalize;
+        }
+    </style>
+</body>
+</html>

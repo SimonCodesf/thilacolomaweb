@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verhuur - Thila Coloma - Scoutsgroep Mechelen</title>
+    <meta name="description" content="Huur onze lokalen en materiaal voor je evenement. Ideaal voor feesten, vergaderingen en activiteiten.">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rae0xxq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <div class="simple-header-content">
+            <a href="../index.html" class="nav-icon" title="Home">
+                <img src="../assets/images/Logo_TC_KLEUR.png" alt="Home">
+            </a>
+            <nav class="simple-nav">
+                <a href="thilala.html" class="nav-icon" title="Thilala">
+                    <img src="../assets/images/icons/Asset 11thilala.svg" alt="Thilala">
+                </a>
+                <a href="stamhoofd.html" class="nav-icon" title="Stamhoofd">
+                    <img src="../assets/images/icons/Asset 1stamhoofd.svg" alt="Stamhoofd">
+                </a>
+                <a href="kalender.html" class="nav-icon" title="Kalender">
+                    <img src="../assets/images/icons/Asset 12agenda.svg" alt="Kalender">
+                </a>
+                <a href="takken.html" class="nav-icon" title="Takken">
+                    <img src="../assets/images/icons/Asset 7takken.svg" alt="Takken">
+                </a>
+                <a href="verhuur.html" class="nav-icon active" title="Verhuur">
+                    <img src="../assets/images/icons/Asset 13verhuur.svg" alt="Verhuur">
+                </a>
+            </nav>
+            <a href="meer.html" class="nav-icon nav-meer" title="Meer">
+                <img src="../assets/images/icons/Asset 19meer.svg" alt="Meer">
+            </a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-section">
+            <h2>Lokaalverhuur</h2>
+            <p class="section-intro">
+                Onze <span>moderne lokalen</span> zijn perfect voor verschillende evenementen. Van <span>kinderfeestjes</span> tot <span>vergaderingen</span> en <span>familiebijeenkomsten</span>.
+            </p>
+            
+            <div id="lokalen-container" class="grid-2">
+                <!-- Lokalen worden hier dynamisch geladen -->
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Materiaalverhuur</h2>
+            <p class="section-intro">
+                Naast onze lokalen verhuren we ook <span>kampeermateriaal</span> en <span>kookgerei</span> voor je buitenactiviteiten.
+            </p>
+            
+            <div id="materiaal-container" class="grid-3">
+                <!-- Materiaal wordt hier dynamisch geladen -->
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Algemene Voorwaarden</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-clock"></i> Reservatie</h3>
+                        <ul>
+                            <li>Reservaties minimaal <span>2 weken</span> op voorhand</li>
+                            <li>Bevestiging via <span>contractondertekening</span></li>
+                            <li>Waarborg van <span>€100</span> (terugbetaalbaar)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-euro-sign"></i> Betaling</h3>
+                        <ul>
+                            <li>50% voorschot bij reservatie</li>
+                            <li>Saldo voor aanvang evenement</li>
+                            <li>Betaling via bankoverschrijving</li>
+                            <li>BE12 3456 7890 1234</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-broom"></i> Kuisregeling</h3>
+                        <ul>
+                            <li>Lokalen <span>proper achterlaten</span></li>
+                            <li>Afval in voorziene containers</li>
+                            <li>Beschadigingen onmiddellijk melden</li>
+                            <li>Extra kuis: €50</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-volume-up"></i> Reglementen</h3>
+                        <ul>
+                            <li>Respect voor <span>buurtbewoners</span></li>
+                            <li>Muziek tot maximum 22:00</li>
+                            <li>Rookverbod in alle lokalen</li>
+                            <li>Eigen verzekering verplicht</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Reservatie Aanvragen</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Contactformulier</h3>
+                    <form class="contact-form" id="verhuur-form">
+                        <div class="form-group">
+                            <label for="naam">Naam *</label>
+                            <input type="text" id="naam" name="naam" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefoon">Telefoon</label>
+                            <input type="tel" id="telefoon" name="telefoon">
+                        </div>
+                        <div class="form-group">
+                            <label for="evenement">Type evenement *</label>
+                            <select id="evenement" name="evenement" required>
+                                <option value="">Selecteer...</option>
+                                <option value="kinderfeest">Kinderfeest</option>
+                                <option value="familiefeest">Familiefeest</option>
+                                <option value="vergadering">Vergadering</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="andere">Andere</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="datum">Gewenste datum *</label>
+                            <input type="date" id="datum" name="datum" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tijdstip">Tijdstip</label>
+                            <input type="text" id="tijdstip" name="tijdstip" placeholder="Van - tot (bv. 14:00 - 18:00)">
+                        </div>
+                        <div class="form-group">
+                            <label for="personen">Aantal personen *</label>
+                            <input type="number" id="personen" name="personen" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lokaal">Gewenst lokaal</label>
+                            <select id="lokaal" name="lokaal">
+                                <option value="">Geen voorkeur</option>
+                                <option value="grote-zaal">Grote zaal (80 personen)</option>
+                                <option value="kleine-zaal">Kleine zaal (30 personen)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="materiaal">Extra materiaal</label>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <label style="display: flex; align-items: center; gap: 5px;">
+                                    <input type="checkbox" name="materiaal[]" value="tenten"> Tenten
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 5px;">
+                                    <input type="checkbox" name="materiaal[]" value="kookmateriaal"> Kookmateriaal
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 5px;">
+                                    <input type="checkbox" name="materiaal[]" value="stoelen"> Extra stoelen
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 5px;">
+                                    <input type="checkbox" name="materiaal[]" value="tafels"> Extra tafels
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="opmerkingen">Opmerkingen</label>
+                            <textarea id="opmerkingen" name="opmerkingen" placeholder="Bijzondere wensen, vragen..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Aanvraag versturen
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Contact Verhuur</h2>
+            <div class="card">
+                <div class="card-content" style="text-align: center;">
+                    <h3>Vragen over verhuur?</h3>
+                    <p>Neem gerust contact op voor meer informatie of een <span>bezichtiging</span> van onze lokalen.</p>
+                    <div style="margin: var(--spacing-lg) 0;">
+                        <p><strong>Email:</strong> <a href="mailto:verhuur@thilacoloma.be">verhuur@thilacoloma.be</a></p>
+                        <p><strong>Telefoon:</strong> <a href="tel:+32151234567">+32 15 12 34 567</a></p>
+                    </div>
+                    <a href="mailto:verhuur@thilacoloma.be" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Direct contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Thila Coloma Mechelen</p>
+                <p>Jubellaan / Geerdegemstraat</p>
+                <p>Email: info@thilacoloma.be</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sociale Media</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <a href="https://stamhoofd.thilacoloma.be" target="_blank">Stamhoofd</a>
+                <a href="meer.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Thila Coloma Mechelen</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load verhuur data and display
+        async function loadVerhuurData() {
+            try {
+                const response = await fetch('../data/site-config.json');
+                const data = await response.json();
+                
+                // Load lokalen
+                const lokalenContainer = document.getElementById('lokalen-container');
+                data.verhuur.lokalen.forEach(lokaal => {
+                    const lokaalCard = document.createElement('div');
+                    lokaalCard.className = 'card';
+                    
+                    lokaalCard.innerHTML = `
+                        <div class="card-content">
+                            <h3><i class="fas fa-building"></i> ${lokaal.naam}</h3>
+                            <div class="verhuur-details">
+                                <div><i class="fas fa-users"></i> Capaciteit: <strong>${lokaal.capaciteit} personen</strong></div>
+                                <div><i class="fas fa-euro-sign"></i> Prijs: <strong>€${lokaal.prijs} per dag</strong></div>
+                            </div>
+                            <p>${lokaal.beschrijving}</p>
+                        </div>
+                    `;
+                    
+                    lokalenContainer.appendChild(lokaalCard);
+                });
+                
+                // Load materiaal
+                const materiaalContainer = document.getElementById('materiaal-container');
+                data.verhuur.materiaal.forEach(item => {
+                    const materiaalCard = document.createElement('div');
+                    materiaalCard.className = 'card';
+                    
+                    materiaalCard.innerHTML = `
+                        <div class="card-content">
+                            <h3><i class="fas fa-box"></i> ${item.naam}</h3>
+                            <div class="verhuur-details">
+                                <div><i class="fas fa-euro-sign"></i> €${item.prijs}</div>
+                                <div>${item.eenheid}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    materiaalContainer.appendChild(materiaalCard);
+                });
+            } catch (error) {
+                console.error('Error loading verhuur data:', error);
+            }
+        }
+        
+        // Handle form submission
+        document.getElementById('verhuur-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Gather form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Create email content
+            const subject = `Verhuuranvraag: ${data.evenement} op ${data.datum}`;
+            const body = `
+Nieuwe verhuuranvraag via website:
+
+Contactgegevens:
+- Naam: ${data.naam}
+- Email: ${data.email}
+- Telefoon: ${data.telefoon || 'Niet opgegeven'}
+
+Evenement:
+- Type: ${data.evenement}
+- Datum: ${data.datum}
+- Tijdstip: ${data.tijdstip || 'Niet opgegeven'}
+- Aantal personen: ${data.personen}
+- Gewenst lokaal: ${data.lokaal || 'Geen voorkeur'}
+
+Extra materiaal: ${data['materiaal[]'] ? (Array.isArray(data['materiaal[]']) ? data['materiaal[]'].join(', ') : data['materiaal[]']) : 'Geen'}
+
+Opmerkingen:
+${data.opmerkingen || 'Geen opmerkingen'}
+            `;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:verhuur@thilacoloma.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+            
+            // Show confirmation
+            alert('Je emailprogramma wordt geopend om de aanvraag te versturen. Als dit niet werkt, stuur dan een email naar verhuur@thilacoloma.be met je gegevens.');
+        });
+        
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadVerhuurData);
+    </script>
+
+    <style>
+        select {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-regular);
+            transition: border-color var(--transition-normal);
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .verhuur-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            font-size: 0.9em;
+        }
+        
+        .verhuur-details > div {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .verhuur-details i {
+            color: var(--primary-color);
+        }
+    </style>
+</body>
+</html>

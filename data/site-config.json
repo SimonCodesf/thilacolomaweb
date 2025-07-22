@@ -7,7 +7,14 @@
     "memberCount": 400,
     "ranking": "5de grootste scoutsgroep van Vlaanderen",
     "city": "Mechelen",
-    "logo": "assets/images/Logo_TC_ WIT.png"
+    "logo": "assets/images/Logo_TC_ WIT.png",
+    "mission": "Als scouts geven we kinderen en jongeren de kans om zich te ontplooien tot gelukkige, zelfstandige en verantwoordelijke mensen door het aanbieden van boeiende, uitdagende en zinvolle activiteiten.",
+    "yearTheme": {
+      "year": 2025,
+      "title": "Samen Sterk",
+      "description": "Dit jaar zetten we in op teamwork en samenwerking. We leren hoe we elkaar kunnen ondersteunen en samen sterker zijn dan alleen.",
+      "color": "var(--primary-color)"
+    }
   },
   "navigation": [
     {
@@ -23,7 +30,7 @@
       "title": "Stamhoofd",
       "icon": "assets/images/icons/Asset 1stamhoofd.svg",
       "link": "#stamhoofd",
-      "color": "#362256",
+      "color": "var(--primary-color)",
       "order": 2
     },
     {
@@ -39,7 +46,7 @@
       "title": "Takken",
       "icon": "assets/images/icons/Asset 7takken.svg",
       "link": "#takken",
-      "color": "#7CA687",
+      "color": "var(--dark-color)",
       "order": 4
     },
     {
@@ -47,7 +54,7 @@
       "title": "Verhuur",
       "icon": "assets/images/icons/Asset 13verhuur.svg",
       "link": "#verhuur",
-      "color": "#314022",
+      "color": "var(--dark-color)",
       "order": 5
     },
     {
@@ -58,5 +65,190 @@
       "color": "rgb(8, 24, 4)",
       "order": 6
     }
-  ]
+  ],
+  "takken": [
+    {
+      "id": "kapoenen",
+      "naam": "Kapoenen",
+      "leeftijd": "6-8 jaar",
+      "beschrijving": "Bij de kapoenen leren de allerkleinste scouts spelenderwijs samen te werken en nieuwe vriendjes te maken. Door middel van verhalen, liedjes en creatieve activiteiten ontdekken ze de wereld om hen heen.",
+      "activiteiten": ["knutselen", "spelletjes", "verhalen", "natuur verkennen"],
+      "leiding": [
+        {
+          "naam": "Emma Peeters",
+          "totem": "Baloo",
+          "email": "kapoenen@thilacoloma.be",
+          "telefoon": "+32 15 12 34 56"
+        }
+      ],
+      "links": {
+        "afwezigheid": "https://stamhoofd.thilacoloma.be/afwezigheid",
+        "rekening": "BE12 3456 7890 1234"
+      },
+      "kleur": "primary"
+    },
+    {
+      "id": "welpen",
+      "naam": "Welpen",
+      "leeftijd": "8-11 jaar",
+      "beschrijving": "De welpen zijn echte ontdekkers! Ze gaan op avontuur in de natuur, leren basisvaardigheden en bouwen sterke vriendschappen. Het jungleboek van Kipling vormt de inspiratie voor hun belevenissen.",
+      "activiteiten": ["kampvuur", "tracking", "pionieren", "teamspelen", "natuuractiviteiten"],
+      "leiding": [
+        {
+          "naam": "Tom Janssens",
+          "totem": "Akela",
+          "email": "welpen@thilacoloma.be",
+          "telefoon": "+32 15 12 34 57"
+        },
+        {
+          "naam": "Lisa Van den Berg",
+          "totem": "Bagheera",
+          "email": "welpen@thilacoloma.be"
+        }
+      ],
+      "links": {
+        "afwezigheid": "https://stamhoofd.thilacoloma.be/afwezigheid",
+        "rekening": "BE12 3456 7890 1234"
+      },
+      "kleur": "dark"
+    },
+    {
+      "id": "jonggivers",
+      "naam": "Jonggivers",
+      "leeftijd": "11-14 jaar",
+      "beschrijving": "Jonggivers zijn de avonturiers van de groep. Ze nemen meer verantwoordelijkheid op zich en leren echte scoutingvaardigheden. Teamwork en uitdaging staan centraal in hun activiteiten.",
+      "activiteiten": ["kampen", "hikes", "technische proeven", "groepsactiviteiten", "service"],
+      "leiding": [
+        {
+          "naam": "Kevin Mertens",
+          "totem": "Chil",
+          "email": "jonggivers@thilacoloma.be",
+          "telefoon": "+32 15 12 34 58"
+        }
+      ],
+      "links": {
+        "afwezigheid": "https://stamhoofd.thilacoloma.be/afwezigheid",
+        "rekening": "BE12 3456 7890 1234"
+      },
+      "kleur": "primary"
+    },
+    {
+      "id": "givers",
+      "naam": "Givers",
+      "leeftijd": "14-17 jaar",
+      "beschrijving": "Givers zijn de tieners die zich voorbereiden op het echte leven. Ze leren leiderschap, nemen initiatieven en organiseren zelf activiteiten. Persoonlijke ontwikkeling staat voorop.",
+      "activiteiten": ["zelfstandige projecten", "leiderschap", "maatschappelijke service", "internationale uitwisselingen"],
+      "leiding": [
+        {
+          "naam": "Sarah Claes",
+          "totem": "Raksha",
+          "email": "givers@thilacoloma.be",
+          "telefoon": "+32 15 12 34 59"
+        }
+      ],
+      "links": {
+        "afwezigheid": "https://stamhoofd.thilacoloma.be/afwezigheid",
+        "rekening": "BE12 3456 7890 1234"
+      },
+      "kleur": "dark"
+    },
+    {
+      "id": "rovers",
+      "naam": "Rovers",
+      "leeftijd": "17+ jaar",
+      "beschrijving": "Rovers zijn jonge volwassenen die hun eigen weg zoeken. Ze werken aan persoonlijke projecten, organiseren activiteiten voor jongere takken en bereiden zich voor op hun rol als toekomstige leiding.",
+      "activiteiten": ["maatschappelijke projecten", "mentoring", "organisatie", "persoonlijke ontwikkeling"],
+      "leiding": [
+        {
+          "naam": "David Verschaeve",
+          "totem": "Rikki",
+          "email": "rovers@thilacoloma.be",
+          "telefoon": "+32 15 12 34 60"
+        }
+      ],
+      "links": {
+        "afwezigheid": "https://stamhoofd.thilacoloma.be/afwezigheid",
+        "rekening": "BE12 3456 7890 1234"
+      },
+      "kleur": "primary"
+    }
+  ],
+  "evenementen": [
+    {
+      "id": "weekendkamp-kapoenen",
+      "titel": "Weekendkamp Kapoenen",
+      "datum": "2025-03-15",
+      "eindDatum": "2025-03-16",
+      "type": "kamp",
+      "tak": "kapoenen",
+      "prijs": 35,
+      "beschrijving": "Een leuk weekendje weg voor onze allerkleinsten met veel spel en plezier.",
+      "inschrijving": "https://stamhoofd.thilacoloma.be/kampen",
+      "medischeFiche": "https://stamhoofd.thilacoloma.be/medische-fiche",
+      "deadline": "2025-03-01"
+    },
+    {
+      "id": "paaskamp-welpen",
+      "titel": "Paaskamp Welpen",
+      "datum": "2025-04-18",
+      "eindDatum": "2025-04-21",
+      "type": "kamp",
+      "tak": "welpen",
+      "prijs": 120,
+      "beschrijving": "Vier dagen vol avontuur in de Ardennen tijdens de paasvakantie.",
+      "inschrijving": "https://stamhoofd.thilacoloma.be/kampen",
+      "medischeFiche": "https://stamhoofd.thilacoloma.be/medische-fiche",
+      "deadline": "2025-04-01"
+    }
+  ],
+  "contact": {
+    "groepsleiding": [
+      {
+        "functie": "Groepsleider",
+        "naam": "Peter Vandenberghe",
+        "email": "groepsleiding@thilacoloma.be",
+        "telefoon": "+32 15 12 34 50"
+      },
+      {
+        "functie": "Ondergroepsleider",
+        "naam": "Marina Willems",
+        "email": "groepsleiding@thilacoloma.be",
+        "telefoon": "+32 15 12 34 51"
+      }
+    ],
+    "algemeen": {
+      "website": "info@thilacoloma.be",
+      "verhuur": "verhuur@thilacoloma.be",
+      "werkjes": "werkjes@thilacoloma.be",
+      "thilala": "thilala@thilacoloma.be"
+    }
+  },
+  "verhuur": {
+    "lokalen": [
+      {
+        "naam": "Grote zaal",
+        "capaciteit": 80,
+        "prijs": 150,
+        "beschrijving": "Ruime zaal perfect voor feesten en vergaderingen"
+      },
+      {
+        "naam": "Kleine zaal",
+        "capaciteit": 30,
+        "prijs": 75,
+        "beschrijving": "Gezellige ruimte voor kleinere bijeenkomsten"
+      }
+    ],
+    "materiaal": [
+      {
+        "naam": "Tenten (4-persoons)",
+        "prijs": 10,
+        "eenheid": "per tent per dag"
+      },
+      {
+        "naam": "Kookmateriaal",
+        "prijs": 25,
+        "eenheid": "per set per dag"
+      }
+    ]
+  }
 }

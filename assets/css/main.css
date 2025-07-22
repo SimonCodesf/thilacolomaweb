@@ -7,7 +7,12 @@ body, html {
     font-family: var(--font-regular);
     height: 100%;
     margin: 0;
-    background: white url(../images/icons/Asset\ 10thilala.svg) no-repeat center -200px / 80vw;
+    background: var(--light-bg);
+}
+
+/* Homepage specific background with logo */
+body.homepage {
+    background: var(--light-bg) url(../images/icons/Asset\ 10thilala.svg) no-repeat center -200px / 80vw;
 }
 
 span {
@@ -19,6 +24,28 @@ span {
 span:hover {
     color: var(--pink-color);
     text-decoration-color: var(--pink-color);
+}
+
+/* Links binnen spans en spans binnen links krijgen dezelfde styling als spans */
+a span, span a, a:has(span) {
+    color: var(--primary-color);
+    text-decoration: underline dotted var(--primary-color) 3px;
+    font-family: var(--font-medium);
+    transition: var(--transition-fast);
+}
+
+a:hover span, span:hover a, a:has(span):hover {
+    color: var(--pink-color);
+    text-decoration-color: var(--pink-color);
+}
+
+/* Reset default link styling for links that contain spans */
+a:has(span) {
+    text-decoration: none;
+}
+
+a:has(span) span {
+    text-decoration: underline dotted var(--primary-color) 3px;
 }
 
 mark {
@@ -135,7 +162,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height: 75%;
-    background-color: var(--pink-color);
+    background-color: var(--primary-color);
     box-shadow: 0 0px 10px rgba(34, 11, 77, 0.3);
     flex: 1 1 calc(0% - 40px);
     margin: var(--spacing-md);
@@ -146,19 +173,19 @@ h1 {
 }
 
 .lower .box:nth-child(2) {
-    background-color: #362256;
+    background-color: var(--primary-color);
 }
 
 .lower .box:nth-child(4) {
-    background-color: #7CA687;
+    background-color: var(--dark-color);
 }
 
 .lower .box:nth-child(5) {
-    background-color: #314022;
+    background-color: var(--primary-color);
 }
 
 .lower .box:nth-child(6) {
-    background-color: rgb(8, 24, 4);
+    background-color: var(--dark-color);
 }
 
 .lower img {

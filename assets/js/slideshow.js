@@ -190,8 +190,13 @@ class Slideshow {
     }
 }
 
-// Initialize slideshow when DOM is loaded
+// Initialize slideshow when DOM is loaded (only if news-slideshow hasn't already handled it)
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if the simple slideshow from news-slideshow.js is already active
+    if (window.slideshowInitialized) {
+        return;
+    }
+    
     const slideshow = new Slideshow('slideshow', 'data/slideshow.json');
     
     // Make slideshow globally accessible for debugging

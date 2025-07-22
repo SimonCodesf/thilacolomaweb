@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takken - Thila Coloma - Scoutsgroep Mechelen</title>
+    <meta name="description" content="Ontdek onze verschillende takken: van Kapoenen tot Rovers. Elke leeftijdsgroep heeft zijn eigen avonturen en uitdagingen.">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rae0xxq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <div class="simple-header-content">
+            <a href="../index.html" class="nav-icon" title="Home">
+                <img src="../assets/images/Logo_TC_KLEUR.png" alt="Home">
+            </a>
+            <nav class="simple-nav">
+                <a href="thilala.html" class="nav-icon" title="Thilala">
+                    <img src="../assets/images/icons/Asset 11thilala.svg" alt="Thilala">
+                </a>
+                <a href="stamhoofd.html" class="nav-icon" title="Stamhoofd">
+                    <img src="../assets/images/icons/Asset 1stamhoofd.svg" alt="Stamhoofd">
+                </a>
+                <a href="kalender.html" class="nav-icon" title="Kalender">
+                    <img src="../assets/images/icons/Asset 12agenda.svg" alt="Kalender">
+                </a>
+                <a href="takken.html" class="nav-icon active" title="Takken">
+                    <img src="../assets/images/icons/Asset 7takken.svg" alt="Takken">
+                </a>
+                <a href="verhuur.html" class="nav-icon" title="Verhuur">
+                    <img src="../assets/images/icons/Asset 13verhuur.svg" alt="Verhuur">
+                </a>
+            </nav>
+            <a href="meer.html" class="nav-icon nav-meer" title="Meer">
+                <img src="../assets/images/icons/Asset 19meer.svg" alt="Meer">
+            </a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-section">
+            <h2>Onze Takken</h2>
+            <p class="section-intro">
+                Bij Thila Coloma is er voor elke leeftijd een passende tak. Van <span>Kapoenen</span> die hun eerste stapjes zetten in de scoutswereld tot <span>Rovers</span> die zich voorbereiden op het echte leven. Ontdek hieronder alle takken en hun unieke activiteiten.
+            </p>
+            
+            <div id="takken-container" class="grid-2">
+                <!-- Takken worden hier dynamisch geladen -->
+            </div>
+        </div>
+
+        <div class="page-section">
+            <h2>Algemene Informatie</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-calendar-alt"></i> Vergaderingen</h3>
+                        <p>Alle takken vergaderen wekelijks op <span>zaterdag</span> van 14:00 tot 17:00. Tijdens schoolvakanties kunnen de tijden aangepast worden.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-euro-sign"></i> Lidgeld</h3>
+                        <p>Het lidgeld bedraagt <span>€120 per jaar</span> en dekt alle wekelijkse activiteiten. Kampen en weekends hebben een aparte kost.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-tshirt"></i> Uniform</h3>
+                        <p>Elk lid draagt het officiële <span>scoutsuniform</span> tijdens vergaderingen en officiële activiteiten. Dit kun je bestellen via het stamhoofd.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-user-plus"></i> Inschrijven</h3>
+                        <p>Nieuwe leden kunnen zich het hele jaar door <span>inschrijven</span> via ons stamhoofd portaal of door contact op te nemen met de groepsleiding.</p>
+                        <a href="https://stamhoofd.thilacoloma.be" class="btn btn-primary" target="_blank">Inschrijven</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Thila Coloma Mechelen</p>
+                <p>Jubellaan / Geerdegemstraat</p>
+                <p>Email: info@thilacoloma.be</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sociale Media</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <a href="https://stamhoofd.thilacoloma.be" target="_blank">Stamhoofd</a>
+                <a href="meer.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Thila Coloma Mechelen</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load takken data and display
+        async function loadTakken() {
+            try {
+                const response = await fetch('../data/site-config.json');
+                const data = await response.json();
+                const takkenContainer = document.getElementById('takken-container');
+                
+                data.takken.forEach(tak => {
+                    const takCard = document.createElement('div');
+                    takCard.className = 'tak-card card';
+                    
+                    takCard.innerHTML = `
+                        <div class="card-content">
+                            <h3>${tak.naam}</h3>
+                            <div class="tak-leeftijd">${tak.leeftijd}</div>
+                            <p>${tak.beschrijving}</p>
+                            <div class="tak-activiteiten">
+                                <strong>Typische activiteiten:</strong><br>
+                                ${tak.activiteiten.map(act => `<span class="activiteit-tag">${act}</span>`).join('')}
+                            </div>
+                            <div class="tak-leiding">
+                                <strong>Leiding:</strong>
+                                ${tak.leiding.map(leider => `
+                                    <div class="leider">
+                                        <span class="leider-naam">${leider.naam} (${leider.totem})</span>
+                                        <a href="mailto:${leider.email}">${leider.email}</a>
+                                        ${leider.telefoon ? `<br><span class="leider-telefoon">${leider.telefoon}</span>` : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="tak-links">
+                                <a href="${tak.links.afwezigheid}" class="btn btn-secondary" target="_blank">Afwezigheid melden</a>
+                                <div class="tak-link-info">
+                                    <strong>Rekening:</strong> ${tak.links.rekening}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    takkenContainer.appendChild(takCard);
+                });
+            } catch (error) {
+                console.error('Error loading takken:', error);
+            }
+        }
+        
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadTakken);
+    </script>
+</body>
+</html>

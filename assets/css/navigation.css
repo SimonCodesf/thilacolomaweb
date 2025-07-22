@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     height: 75%;
-    background-color: var(--pink-color);
+    background-color: var(--primary-color);
     box-shadow: 0 0px 10px rgba(34, 11, 77, 0.3);
     flex: 1 1 calc(0% - 40px);
     margin: var(--spacing-md);
@@ -47,17 +47,17 @@
 }
 
 .nav-button:nth-child(2) {
-    background-color: #362256;
+    background-color: var(--primary-color);
 }
 
 .nav-button:nth-child(4) {
-    background-color: #7CA687;
+    background-color: var(--dark-color);
 }
 
 .nav-button:nth-child(5) {
-    background-color: #314022;
+    background-color: var(--primary-color);
 }
 
 .nav-button:nth-child(6) {
-    background-color: rgb(8, 24, 4);
+    background-color: var(--dark-color);
 }

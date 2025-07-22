@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamhoofd - Thila Coloma - Inschrijven en Beheer</title>
+    <meta name="description" content="Stamhoofd platform voor inschrijvingen, afwezigheden melden en ledenbeheer van Thila Coloma.">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rae0xxq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <div class="simple-header-content">
+            <a href="../index.html" class="nav-icon" title="Home">
+                <img src="../assets/images/Logo_TC_KLEUR.png" alt="Home">
+            </a>
+            <nav class="simple-nav">
+                <a href="thilala.html" class="nav-icon" title="Thilala">
+                    <img src="../assets/images/icons/Asset 11thilala.svg" alt="Thilala">
+                </a>
+                <a href="stamhoofd.html" class="nav-icon active" title="Stamhoofd">
+                    <img src="../assets/images/icons/Asset 1stamhoofd.svg" alt="Stamhoofd">
+                </a>
+                <a href="kalender.html" class="nav-icon" title="Kalender">
+                    <img src="../assets/images/icons/Asset 12agenda.svg" alt="Kalender">
+                </a>
+                <a href="takken.html" class="nav-icon" title="Takken">
+                    <img src="../assets/images/icons/Asset 7takken.svg" alt="Takken">
+                </a>
+                <a href="verhuur.html" class="nav-icon" title="Verhuur">
+                    <img src="../assets/images/icons/Asset 13verhuur.svg" alt="Verhuur">
+                </a>
+            </nav>
+            <a href="meer.html" class="nav-icon nav-meer" title="Meer">
+                <img src="../assets/images/icons/Asset 19meer.svg" alt="Meer">
+            </a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="page-section">
+            <h2>Stamhoofd Platform</h2>
+            <p class="section-intro">
+                Via het stamhoofd platform kun je je inschrijven voor activiteiten, gegevens nakijken, openstaande rekeningen betalen en meer. Klik <a href="https://inschrijven.thilacoloma.be/" target="_blank"><span>hier</span></a> om stamhoofd in een nieuw 
+                tabblad te openen.
+            </p>
+            
+            <!-- Fallback kaarten voor als iframe niet werkt -->
+            <div id="stamhoofd-fallback" class="grid-2" style="display: none;">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Inschrijvingen</h3>
+                        <p>Schrijf je in voor het nieuwe scoutsjaar of meld nieuwe leden aan.</p>
+                        <a href="https://stamhoofd.thilacoloma.be" class="btn btn-primary" target="_blank">
+                            Naar Stamhoofd <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Afwezigheid Melden</h3>
+                        <p>Meld tijdig je afwezigheid voor vergaderingen en activiteiten.</p>
+                        <a href="https://stamhoofd.thilacoloma.be/afwezigheid" class="btn btn-primary" target="_blank">
+                            Afwezigheid Melden <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Medische Fiche</h3>
+                        <p>Download en upload je medische fiche voor kampen en activiteiten.</p>
+                        <a href="https://stamhoofd.thilacoloma.be/medische-fiche" class="btn btn-primary" target="_blank">
+                            Medische Fiche <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Betalingen</h3>
+                        <p>Overzicht van openstaande betalingen en lidgeld.</p>
+                        <a href="https://stamhoofd.thilacoloma.be/betalingen" class="btn btn-primary" target="_blank">
+                            Betalingen <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Iframe container -->
+            <div class="stamhoofd-container">
+                <iframe 
+                    id="stamhoofd-iframe" 
+                    src="https://inschrijven.thilacoloma.be/" 
+                    style="width: 100%; height: 80vh; border: none; border-radius: var(--border-radius-md); box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+                    title="Stamhoofd Platform">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Check if iframe loads successfully
+        const iframe = document.getElementById('stamhoofd-iframe');
+        const fallback = document.getElementById('stamhoofd-fallback');
+        
+        iframe.onerror = function() {
+            // If iframe fails to load, show fallback cards
+            iframe.style.display = 'none';
+            fallback.style.display = 'grid';
+        };
+        
+        // Also check after a timeout
+        setTimeout(() => {
+            try {
+                iframe.contentDocument;
+            } catch (e) {
+                // Cross-origin error means the site blocks iframes
+                iframe.style.display = 'none';
+                fallback.style.display = 'grid';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
