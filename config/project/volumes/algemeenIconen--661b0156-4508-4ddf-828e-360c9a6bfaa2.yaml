@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  b4ee5c2b-be0a-43b7-a88e-c323fff9f7d5:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 48e47193-09e1-4bc3-986a-ee9383d19b89
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2a496c3-6ba0-4662-bb00-9141699ae8b1
+        userCondition: null
+fs: algemeenIconen
+handle: algemeenIconen
+name: 'Algemeen - Iconen'
+sortOrder: 38
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

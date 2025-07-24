@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  a134e715-5e6b-429e-a41c-78f363b02667:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 36acca38-f474-4e40-a958-64aea19f2c13
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ddae9267-3924-420a-8111-ed8c53451313
+        userCondition: null
+fs: kalenderActiviteiten
+handle: kalenderActiviteiten
+name: 'Kalender - Activiteiten'
+sortOrder: 32
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

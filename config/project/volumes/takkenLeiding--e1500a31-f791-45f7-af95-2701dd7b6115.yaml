@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  fbd0ee60-e3ce-461a-b276-9502f4758fc9:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 9ca03a63-9d7c-4022-b0c8-4cd3ab544b74
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a8609c96-a673-45b0-8d79-85c99725a1d4
+        userCondition: null
+fs: takkenLeiding
+handle: takkenLeiding
+name: 'Takken - Leiding'
+sortOrder: 18
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

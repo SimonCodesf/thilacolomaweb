@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  69e7d8a3-1f62-42cd-a576-e41735956f38:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 9bd703f1-b13c-456e-a027-19dc253f7d03
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 05df1553-2756-4aea-9148-3a65ff7c8e76
+        userCondition: null
+fs: verhuurLokalen
+handle: verhuurLokalen
+name: 'Verhuur - Lokalen'
+sortOrder: 20
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

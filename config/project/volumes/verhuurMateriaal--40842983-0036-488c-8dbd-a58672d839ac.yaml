@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  89b15d18-b9d8-49bc-a67f-b3e89296d076:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: d24a9da1-e6c7-480f-a80d-27a294100fdb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fbaf0e7d-3759-4c0b-92a5-26bd847fde78
+        userCondition: null
+fs: verhuurMateriaal
+handle: verhuurMateriaal
+name: 'Verhuur - Materiaal'
+sortOrder: 22
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

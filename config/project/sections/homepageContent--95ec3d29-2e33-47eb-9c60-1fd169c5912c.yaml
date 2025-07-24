@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 8a5b51d8-63d9-4cf9-ba17-4b5726cfcbb9 # Homepage
+handle: homepageContent
+maxAuthors: 1
+name: 'Homepage Content'
+propagationMethod: all
+siteSettings:
+  8d561536-3256-450a-ac48-318bb09cc43d: # Thila Coloma Web
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

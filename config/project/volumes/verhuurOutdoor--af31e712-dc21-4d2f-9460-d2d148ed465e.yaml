@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  e6291577-aae0-48ea-8263-5eb7bef26ee3:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 4941159d-64d4-40d8-94e3-cb7af46ca4c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e23569ef-134c-42bd-bf38-b8844028461e
+        userCondition: null
+fs: verhuurOutdoor
+handle: verhuurOutdoor
+name: 'Verhuur - Outdoor'
+sortOrder: 23
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

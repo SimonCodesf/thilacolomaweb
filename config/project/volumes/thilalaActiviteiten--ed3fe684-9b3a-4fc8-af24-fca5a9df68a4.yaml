@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  50bb3d74-ac86-4d24-8cbe-522c7583047c:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: e68b6330-f35c-4f66-9c53-10ac131793ab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b0b919cf-f3b0-4558-8638-d92d0906cbf4
+        userCondition: null
+fs: thilalaActiviteiten
+handle: thilalaActiviteiten
+name: 'Thilala - Activiteiten'
+sortOrder: 26
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

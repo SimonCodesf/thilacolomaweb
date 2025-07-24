@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  9fc3b67d-f019-45d3-b0fe-a240490608ed:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: b5f41e6e-90f0-486b-b356-3e656ea52a29
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e5c27608-5e4b-4fc7-81e8-e68a998f74d1
+        userCondition: null
+fs: meerContact
+handle: meerContact
+name: 'Meer - Contact'
+sortOrder: 36
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

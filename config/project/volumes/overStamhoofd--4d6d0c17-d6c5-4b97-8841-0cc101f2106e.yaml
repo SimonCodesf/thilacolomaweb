@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  1d3da938-39a5-47a7-87f1-47ac8e6d1e8b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: c8aae92f-5d3f-4400-afd6-fbd276949d10
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e82ef961-e454-4f9a-87d6-855713318429
+        userCondition: null
+fs: overStamhoofd
+handle: overStamhoofd
+name: 'Over - Stamhoofd'
+sortOrder: 27
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

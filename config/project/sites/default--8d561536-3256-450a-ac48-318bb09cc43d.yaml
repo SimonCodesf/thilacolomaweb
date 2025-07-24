@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: nl
+name: 'Thila Coloma Web'
+primary: true
+siteGroup: a90187a7-2fc4-4bce-8f17-34f0637169c7 # Thila Coloma Web
+sortOrder: 1

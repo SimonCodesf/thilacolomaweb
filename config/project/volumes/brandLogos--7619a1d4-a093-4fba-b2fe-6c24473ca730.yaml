@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  6dd2c39c-17b7-48f6-8f9f-45d0bb7cb9f6:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 82946fec-32a5-467b-9595-49fd90cdc4d7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fdb232a4-4742-4d51-81c2-223328b16915
+        userCondition: null
+fs: brandLogos
+handle: brandLogos
+name: 'Brand - Logos'
+sortOrder: 6
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

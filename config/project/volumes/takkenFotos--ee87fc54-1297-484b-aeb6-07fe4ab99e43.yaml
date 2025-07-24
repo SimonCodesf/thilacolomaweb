@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  eaf493c3-9fe3-4d42-88da-66a43e82c9a4:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 24a1a699-ab12-4e69-8611-6b8bdd61099e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 10eff80f-fdc1-49ee-80a2-838820149b6e
+        userCondition: null
+fs: takkenFotos
+handle: takkenFotos
+name: 'Takken Fotos 2024-2025'
+sortOrder: 4
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

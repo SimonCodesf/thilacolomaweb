@@ -1,0 +1,44 @@
+dateModified: 1753361447
+email:
+  fromEmail: team.communicatie@thilacoloma.be
+  fromName: 'Thila Coloma Web'
+  transportType: craft\mail\transportadapters\Sendmail
+filesystems:
+  slideshowImages:
+    path: '@webroot/assets/images/slideshow'
+    type: craft\fs\Local
+    url: /assets/images/slideshow
+fs:
+  slideshowImages:
+    hasUrls: false
+    name: 'Slideshow Images'
+    settings:
+      path: '@webroot/assets/images/slideshow'
+    type: craft\fs\Local
+    url: null
+meta:
+  __names__:
+    8d561536-3256-450a-ac48-318bb09cc43d: 'Thila Coloma Web' # Thila Coloma Web
+    9ccdf82d-9a11-4507-8928-dd8d740cca7c: 'Slideshow Images' # Slideshow Images
+    2312b1da-58be-4094-8244-21ed677fa084: 'Public Schema' # Public Schema
+    2483b342-3ee5-4d82-afec-232fdcfdcfee: Slideshow # Slideshow
+    5132b121-1b3d-417d-a3bc-f28b8b1a6880: 'Evenementen Slideshow' # Evenementen Slideshow
+    a90187a7-2fc4-4bce-8f17-34f0637169c7: 'Thila Coloma Web' # Thila Coloma Web
+    b7326d23-edc3-47d0-990f-da4dc95ed081: Titel # Titel
+    bde9bfb9-2df8-4219-87ba-a614f6c9f31a: 'Meer Info Link' # Meer Info Link
+    ec646752-bd18-44a8-b38b-28bd7086ae77: 'Slideshow Item' # Slideshow Item
+    ee925e58-0dde-4e07-9e10-34159c3fd34c: Beschrijving # Beschrijving
+    f9d6ff6f-fa93-4d60-90fa-0a1f8ad4f09c: Afbeelding # Afbeelding
+system:
+  edition: solo
+  live: true
+  name: 'Thila Coloma Web'
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

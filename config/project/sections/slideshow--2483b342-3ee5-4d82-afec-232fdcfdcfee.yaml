@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: d3d80e9e-98b3-43bd-a4f5-5a33881ec53e # slideshow
+handle: slideshow
+maxAuthors: 1
+name: Slideshow
+propagationMethod: all
+siteSettings:
+  8d561536-3256-450a-ac48-318bb09cc43d: # Thila Coloma Web
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

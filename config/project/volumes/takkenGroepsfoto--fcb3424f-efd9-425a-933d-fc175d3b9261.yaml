@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  07b0ca79-cb7d-4596-a75b-caeb11170e45:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: a4e9c7cb-84d6-43e9-82e9-58c719187d0d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ed348fe5-2804-4a6c-87e0-d032bf460423
+        userCondition: null
+fs: takkenGroepsfoto
+handle: takkenGroepsfoto
+name: "Takken - Groepsfoto's"
+sortOrder: 19
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

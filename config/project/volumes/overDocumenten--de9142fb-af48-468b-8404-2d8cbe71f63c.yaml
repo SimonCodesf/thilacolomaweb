@@ -1,0 +1,51 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  fbd1f38f-4c9f-413b-b338-8d2634462ca0:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: b1870179-d1ad-46a3-8c59-4440e00b7f85
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6bc64980-bd62-4dcf-8f55-2ccd999eab09
+        userCondition: null
+fs: overDocumenten
+handle: overDocumenten
+name: 'Over - Documenten'
+sortOrder: 30
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''
