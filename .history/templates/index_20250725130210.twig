@@ -1,21 +1,23 @@
-file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/index.twig {"mtime":1753350806512,"ctime":1753350806223,"size":6862,"etag":"3eijnkena74b","orphaned":false,"typeId":""}
 {% extends "_layouts/base.twig" %}
 
 {% block bodyClass %}homepage{% endblock %}
 
 {% block content %}
+{# Fetch the homepage content entry #}
+{% set homepageEntry = craft.entries.section('homepageContent').one() %}
+
 <div class="containerVoorpagina">
     <div class="upper">
         <div class="upper-left box">
             <div class="titel">
-                <h1><mark>{{ organization.name ?? 'Thila Coloma' }}</mark></h1>
+                <h1><mark>{{ homepageEntry.siteTitle ?? 'Thila Coloma' }}</mark></h1>
             </div>
             <p>
                 <mark>
-                    {{ organization.description ?? 'Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.' }}
+                    {{ homepageEntry.siteDescription ?? 'Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.' }}
                     <br><br>
-                    {{ organization.location ?? 'Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.' }} 
-                    Meer info over ons vindt je <a href="{{ url('over') }}"><span>hier</span></a>
+                    {{ homepageEntry.siteLocation ?? 'Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.' }} 
+                    Meer info over ons vindt je <a href="/over"><span>hier</span></a>
                 </mark>
             </p>
         </div>
