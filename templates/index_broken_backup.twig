@@ -1,0 +1,170 @@
+{% extends "_layouts/base.twig" %}
+
+{% block bodyClass %}homepage{% endblock %}
+
+{% block content %}
+{# Fetch the homepage content entry #}
+{% set homepageEntry = craft.entries.section('homepageContent').one() %}
+
+<div class="containerVoorpagina">
+    <div class="upper">
+        <div class="upper-left box">
+            <div class="titel">
+                <h1><mark>{{ homepageEntry.siteTitle ?? siteName ?? 'Thila Coloma' }}</mark></h1>
+            </div>
+            <p>
+                <mark>
+                    {{ homepageEntry.siteDescription ?? 'Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.' }}
+                    <br><br>
+                    {{ homepageEntry.siteLocation ?? 'Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.' }} 
+                    Meer info over ons vindt je <a href="/over"><span>hier</span></a>
+                </mark>
+            </p>
+        </div>
+        
+        <div class="container-upper-right">
+            <h1>Nieuws & Opkomende Evenementen</h1>
+            
+            {% set slideshowEntries = craft.entries.section('slideshow').limit(3).all() %}
+            {% if slideshowEntries|length %}
+                <div class="upper-right box" id="slideshow">
+                    {% for entry in slideshowEntries %}
+                        <div class="slide">
+                            {% if entry.afbeelding|length %}
+                                <img src="{{ entry.afbeelding.one().url }}" alt="{{ entry.afbeelding.one().alt ?? entry.title }}">
+                            {% endif %}
+                            <div class="slide-text">
+                                <h2>{{ entry.titel ?? entry.title }}</h2>
+                                <p>{{ entry.beschrijving ?? entry.excerpt ?? entry.summary }}</p>
+                                {% if entry.meerInfoLink %}
+                                    <a href="{{ entry.meerInfoLink }}" class="meer-button">Meer info</a>
+                                {% else %}
+                                    <button class="meer-button">Meer info</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="slideshow-dots">
+                    {% for entry in slideshowEntries %}
+                        <span class="dot" onclick="currentSlide({{ loop.index0 }})"></span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {# Fallback to static content from original HTML #}
+                <div class="upper-right box" id="slideshow">
+                    <div class="slide">
+                        <img src="/assets/images/slideshow/1image.jpg" alt="Pizzabak evenement">
+                        <div class="slide-text">
+                            <h2>Pizzabak</h2>
+                            <p>TC organiseert weer een pizzabak voor onze nieuwe lokalen! Wij maken overheerlijke ambachtelijke pizza's die jullie 24 november kunnen komen ophalen op de scouts en thuis gewoon nog even moeten afbakken.</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/images/slideshow/2image.jpg" alt="Belofteweekend">
+                        <div class="slide-text">
+                            <h2>Belofteweekend</h2>
+                            <p>Het belofteweekend komt er weer aan! Vergeet zeker niet in te schrijven via stamhoofd, de deadline is 30 november.</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/images/slideshow/3image.jpg" alt="TC's Cadeaupakket">
+                        <div class="slide-text">
+                            <h2>TC's Cadeaupakket</h2>
+                            <p>Nog op zoek naar het perfecte cadeau voor onder de kerstboom? Verras je geliefden met ons cadeaupakket met typisch Mechelse lekkernijen!</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slideshow-dots">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+                {# Fallback to static content if no entries #}
+                <div class="upper-right box" id="slideshow">
+                    <div class="slide">
+                        <img src="{{ alias('@web/assets/images/slideshow/1image.jpg') }}" alt="Pizzabak evenement">
+                        <div class="slide-text">
+                            <h2>Pizzabak</h2>
+                            <p>TC organiseert weer een pizzabak voor onze nieuwe lokalen! Wij maken overheerlijke ambachtelijke pizza's die jullie 24 november kunnen komen ophalen op de scouts en thuis gewoon nog even moeten afbakken.</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="{{ alias('@web/assets/images/slideshow/2image.jpg') }}" alt="Belofteweekend">
+                        <div class="slide-text">
+                            <h2>Belofteweekend</h2>
+                            <p>Het belofteweekend komt er weer aan! Vergeet zeker niet in te schrijven via stamhoofd, de deadline is 30 november.</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="{{ alias('@web/assets/images/slideshow/3image.jpg') }}" alt="TC's Cadeaupakket">
+                        <div class="slide-text">
+                            <h2>TC's Cadeaupakket</h2>
+                            <p>Nog op zoek naar het perfecte cadeau voor onder de kerstboom? Verras je geliefden met ons cadeaupakket met typisch Mechelse lekkernijen!</p>
+                            <button class="meer-button">Meer info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slideshow-dots">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    {% set navigationItems = craft.entries.section('navigation').orderBy('navigationOrder ASC').all() %}
+    {% if navigationItems|length %}
+        <nav class="lower navigation-grid" aria-label="Hoofdnavigatie">
+            {% for item in navigationItems %}
+                <a href="{{ item.navigationLink ?? item.url }}" class="nav-button" aria-label="{{ item.title }}">
+                    {% if item.navigationIcon|length %}
+                        <img src="{{ item.navigationIcon.one().url }}" alt="{{ item.title }} icoon">
+                    {% endif %}
+                    <h3>{{ item.title }}</h3>
+                </a>
+            {% endfor %}
+        </nav>
+    {% else %}
+        {# Fallback navigation #}
+        <nav class="lower navigation-grid" aria-label="Hoofdnavigatie">
+            <a href="{{ url('thilala') }}" class="nav-button" aria-label="Thilala clubblad">
+                <img src="{{ alias('@web/assets/images/icons/Asset 11thilala.svg') }}" alt="Thilala icoon">
+                <h3>Thilala</h3>
+            </a>
+            <a href="{{ url('stamhoofd') }}" class="nav-button" aria-label="Stamhoofd informatie">
+                <img src="{{ alias('@web/assets/images/icons/Asset 1stamhoofd.svg') }}" alt="Stamhoofd icoon">
+                <h3>Stamhoofd</h3>
+            </a>
+            <a href="{{ url('kalender') }}" class="nav-button" aria-label="Evenementen kalender">
+                <img src="{{ alias('@web/assets/images/icons/Asset 12agenda.svg') }}" alt="Kalender icoon">
+                <h3>Kalender</h3>
+            </a>
+            <a href="{{ url('takken') }}" class="nav-button" aria-label="Scouts takken">
+                <img src="{{ alias('@web/assets/images/icons/Asset 7takken.svg') }}" alt="Takken icoon">
+                <h3>Takken</h3>
+            </a>
+            <a href="{{ url('verhuur') }}" class="nav-button" aria-label="Lokaal verhuur">
+                <img src="{{ alias('@web/assets/images/icons/Asset 13verhuur.svg') }}" alt="Verhuur icoon">
+                <h3>Verhuur</h3>
+            </a>
+            <a href="{{ url('meer') }}" class="nav-button" aria-label="Meer informatie">
+                <img src="{{ alias('@web/assets/images/icons/Asset 19meer.svg') }}" alt="Meer icoon">
+                <h3>Meer</h3>
+            </a>
+        </nav>
+    {% endif %}
+</div>
+{% endblock %}

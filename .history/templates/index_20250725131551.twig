@@ -3,16 +3,16 @@
 {% block bodyClass %}homepage{% endblock %}
 
 {% block content %}
-{# Get homepage content from CMS #}
-{% set homepageEntry = craft.entries.section('homepage').one() %}
+{# Try to get homepage content entry from CMS #}
+{% set homepageEntry = craft.entries.section('homepageContent').one() %}
 
 <div class="containerVoorpagina">
     <div class="upper">
         <div class="upper-left box">
             <div class="titel">
                 <h1><mark>
-                {% if homepageEntry and homepageEntry.title %}
-                    {{ homepageEntry.title }}
+                {% if homepageEntry and attribute(homepageEntry, 'siteTitle') %}
+                    {{ attribute(homepageEntry, 'siteTitle') }}
                 {% elseif siteName is defined %}
                     {{ siteName }}
                 {% else %}
@@ -22,13 +22,17 @@
             </div>
             <p>
                 <mark>
-                    {% if homepageEntry %}
-                        {{ homepageEntry.title }}
+                    {% if homepageEntry and attribute(homepageEntry, 'siteDescription') %}
+                        {{ attribute(homepageEntry, 'siteDescription') }}
                     {% else %}
                         Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.
                     {% endif %}
                     <br><br>
-                    Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.
+                    {% if homepageEntry and attribute(homepageEntry, 'siteLocation') %}
+                        {{ attribute(homepageEntry, 'siteLocation') }}
+                    {% else %}
+                        Ons terrein ligt tussen de Jubellaan en de Geerdegemstraat.
+                    {% endif %}
                     Meer info over ons vindt je <a href="/over"><span>hier</span></a>
                 </mark>
             </p>
@@ -37,16 +41,22 @@
         <div class="container-upper-right">
             <h1>Nieuws & Opkomende Evenementen</h1>
             
-            {# Try to get slideshow entries from CMS #}
             {% set slideshowEntries = craft.entries.section('slideshow').limit(3).all() %}
             {% if slideshowEntries|length %}
                 <div class="upper-right box" id="slideshow">
                     {% for entry in slideshowEntries %}
                         <div class="slide">
+                            {% if entry.afbeelding|length %}
+                                <img src="{{ entry.afbeelding.one().url }}" alt="{{ entry.afbeelding.one().alt ?? entry.title }}">
+                            {% endif %}
                             <div class="slide-text">
-                                <h2>{{ entry.title }}</h2>
-                                <p>Nieuws item uit CMS</p>
-                                <button class="meer-button">Meer info</button>
+                                <h2>{{ entry.titel ?? entry.title }}</h2>
+                                <p>{{ entry.beschrijving ?? entry.excerpt ?? entry.summary }}</p>
+                                {% if entry.meerInfoLink %}
+                                    <a href="{{ entry.meerInfoLink }}" class="meer-button">Meer info</a>
+                                {% else %}
+                                    <button class="meer-button">Meer info</button>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
@@ -58,7 +68,7 @@
                     {% endfor %}
                 </div>
             {% else %}
-                {# Fallback to static content #}
+                {# Fallback to static content from original HTML #}
                 <div class="upper-right box" id="slideshow">
                     <div class="slide">
                         <img src="/assets/images/slideshow/1image.jpg" alt="Pizzabak evenement">

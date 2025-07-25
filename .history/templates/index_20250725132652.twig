@@ -22,8 +22,8 @@
             </div>
             <p>
                 <mark>
-                    {% if homepageEntry %}
-                        {{ homepageEntry.title }}
+                    {% if homepageEntry and homepageEntry.summary %}
+                        {{ homepageEntry.summary }}
                     {% else %}
                         Thila Coloma is een gemengde jeugdbeweging die in 1975 werd opgericht en ondertussen tot de grootste scoutsgroep van Mechelen is uitgegroeid. Ruim 400 jongeren voelen zich bij ons thuis. Hiermee zijn we de 5de grootste scoutsgroep van Vlaanderen.
                     {% endif %}
@@ -45,7 +45,7 @@
                         <div class="slide">
                             <div class="slide-text">
                                 <h2>{{ entry.title }}</h2>
-                                <p>Nieuws item uit CMS</p>
+                                <p>{{ entry.summary ?? 'Geen beschrijving beschikbaar.' }}</p>
                                 <button class="meer-button">Meer info</button>
                             </div>
                         </div>
