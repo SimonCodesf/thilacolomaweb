@@ -1,3 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/web/.htaccess {"mtime":1753350833148,"ctime":1753350832907,"size":1934,"etag":"3eijnlhdo20c","orphaned":false,"typeId":""}
 # Redirect to HTTPS
 RewriteEngine On
 RewriteCond %{HTTPS} off

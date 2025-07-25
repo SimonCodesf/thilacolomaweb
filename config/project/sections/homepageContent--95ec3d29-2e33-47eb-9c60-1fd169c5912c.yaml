@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: false
 entryTypes:
   -
-    uid: 8a5b51d8-63d9-4cf9-ba17-4b5726cfcbb9 # Homepage
+    uid: 8a5b51d8-63d9-4cf9-ba17-4b5726cfcbb9
 handle: homepageContent
 maxAuthors: 1
 name: 'Homepage Content'

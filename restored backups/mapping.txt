@@ -1,0 +1,61 @@
+Backup bestand mapping:
+Backup: -11319f87
+Target: Kon niet bepalen
+---
+Backup: -275a5aeb
+Target: Kon niet bepalen
+---
+Backup: -31e607f2
+Target: Kon niet bepalen
+---
+Backup: -4d513e79
+Target: Kon niet bepalen
+---
+Backup: -545f751d
+Target: Kon niet bepalen
+---
+Backup: -65bdee45
+Target: Kon niet bepalen
+---
+Backup: -65eb31fa
+Target: Kon niet bepalen
+---
+Backup: -6b6026c8
+Target: Kon niet bepalen
+---
+Backup: -7aa0dab2
+Target: Kon niet bepalen
+---
+Backup: -f4a33f3
+Target: Kon niet bepalen
+---
+Backup: 2e2e90ef
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/README.md {
+---
+Backup: 30fc0263
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/.env.example {
+---
+Backup: 4684739e
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/.gitignore {
+---
+Backup: 5b3deeb2
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/nieuws/_entry.twig {
+---
+Backup: 61462a73
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/pages/_entry.twig {
+---
+Backup: 6a72c0fb
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/index.twig {
+---
+Backup: 70abcfb2
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/storage/.gitignore {
+---
+Backup: backup_mapping.txt
+Target: Kon niet bepalen
+---
+Backup: f08add7
+Target: /Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/_layouts/base.twig {
+---
+Backup: mapping.txt
+Target: Kon niet bepalen
+---

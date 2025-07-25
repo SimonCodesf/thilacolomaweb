@@ -1,3 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/index.twig {"mtime":1753350806512,"ctime":1753350806223,"size":6862,"etag":"3eijnkena74b","orphaned":false,"typeId":""}
 {% extends "_layouts/base.twig" %}
 
 {% block bodyClass %}homepage{% endblock %}

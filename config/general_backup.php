@@ -1,0 +1,93 @@
+<?php
+
+use craft\helpers\App;
+
+return [
+    // Global settings
+    '*' => [
+        // Default Week Start Day (0 = Sunday, 1 = Monday...)
+        'defaultWeekStartDay' => 1,
+
+        // Whether generated URLs should omit "index.php"
+        'omitScriptNameInUrls' => true,
+
+        // Control Panel trigger word
+        'cpTrigger' => 'admin',
+
+        // The secure key Craft will use for hashing and encrypting data
+        'securityKey' => App::env('CRAFT_SECURITY_KEY'),
+
+        // Site name
+        'siteName' => 'Thila Coloma',
+
+        // Site URL
+        'siteUrl' => App::env('CRAFT_SITE_URL') ?: '@web',
+
+        // Custom error templates
+        'errorTemplatePrefix' => 'errors/',
+
+        // Database
+        'db' => [
+            'dsn' => App::env('CRAFT_DB_DSN') ?: (App::env('CRAFT_DB_DRIVER') . ':host=' . App::env('CRAFT_DB_SERVER') . ';port=' . App::env('CRAFT_DB_PORT') . ';dbname=' . App::env('CRAFT_DB_DATABASE')),
+            'user' => App::env('CRAFT_DB_USER'),
+            'password' => App::env('CRAFT_DB_PASSWORD'),
+            'schema' => App::env('CRAFT_DB_SCHEMA'),
+            'tablePrefix' => App::env('CRAFT_DB_TABLE_PREFIX'),
+        ],
+
+        // Image transforms
+        'defaultImageQuality' => 90,
+        'optimizeImageFilesize' => true,
+
+        // Cache duration
+        'cacheDuration' => 'P1D',
+
+        // Asset settings
+        'maxUploadFileSize' => '50M',
+
+        // Language settings
+        'defaultSearchTermOptions' => [
+            'subLeft' => true,
+            'subRight' => true,
+        ],
+    ],
+
+    // Dev environment settings
+    'dev' => [
+        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+        'devMode' => App::env('CRAFT_DEV_MODE') ?? true,
+
+        // Whether administrative changes should be allowed
+        'allowAdminChanges' => App::env('CRAFT_ALLOW_ADMIN_CHANGES') ?? true,
+
+        // Disallow robots
+        'disallowRobots' => App::env('CRAFT_DISALLOW_ROBOTS') ?? true,
+
+        // Base site URL
+        'siteUrl' => App::env('CRAFT_SITE_URL') ?: 'http://localhost:8080',
+    ],
+
+    // Staging environment settings
+    'staging' => [
+        // Dev Mode
+        'devMode' => false,
+
+        // Whether administrative changes should be allowed
+        'allowAdminChanges' => false,
+
+        // Disallow robots
+        'disallowRobots' => true,
+    ],
+
+    // Production environment settings
+    'production' => [
+        // Dev Mode
+        'devMode' => false,
+
+        // Whether administrative changes should be allowed
+        'allowAdminChanges' => false,
+
+        // Disallow robots
+        'disallowRobots' => false,
+    ],
+];

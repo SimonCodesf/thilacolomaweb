@@ -1,0 +1,44 @@
+=== -11319f87 ===
+
+=== -275a5aeb ===
+
+=== -31e607f2 ===
+
+=== -4d513e79 ===
+
+=== -545f751d ===
+
+=== -65bdee45 ===
+
+=== -65eb31fa ===
+
+=== -6b6026c8 ===
+
+=== -7aa0dab2 ===
+
+=== -f4a33f3 ===
+
+=== 2e2e90ef ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/README.md
+
+=== 30fc0263 ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/.env.example
+
+=== 4684739e ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/.gitignore
+
+=== 5b3deeb2 ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/nieuws/_entry.twig
+
+=== 61462a73 ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/pages/_entry.twig
+
+=== 6a72c0fb ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/index.twig
+
+=== 70abcfb2 ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/storage/.gitignore
+
+=== f08add7 ===
+/Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/_layouts/base.twig
+

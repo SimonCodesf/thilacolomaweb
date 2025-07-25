@@ -1,3 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/pages/_entry.twig {"mtime":1753350925439,"ctime":1753350925175,"size":1278,"etag":"3eijnpb681a7","orphaned":false,"typeId":""}
 {% extends "_layouts/base.twig" %}
 
 {% set title = entry.title %}

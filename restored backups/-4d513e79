@@ -1,3 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/nieuws/index.twig {"mtime":1753350965960,"ctime":1753350965736,"size":1976,"etag":"3eijnr1bg21n","orphaned":false,"typeId":""}
 {% extends "_layouts/base.twig" %}
 
 {% set title = "Nieuws & Evenementen" %}

@@ -1,0 +1,33 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/config/mail.php {"mtime":1753350749282,"ctime":1753350749066,"size":1012,"etag":"3eijni4lq11k","orphaned":false,"typeId":""}
+<?php
+
+use craft\helpers\App;
+
+return [
+    '*' => [
+        'fromEmail' => App::env('CRAFT_MAIL_FROM_EMAIL') ?: 'info@thilacoloma.be',
+        'fromName' => App::env('CRAFT_MAIL_FROM_NAME') ?: 'Thila Coloma',
+        'replyToEmail' => App::env('CRAFT_MAIL_REPLY_TO_EMAIL') ?: 'info@thilacoloma.be',
+    ],
+
+    'dev' => [
+        // Use file transport in dev
+        'transportType' => 'craft\\mail\\transportadapters\\File',
+        'transportSettings' => [
+            'path' => '@storage/runtime/mail',
+        ],
+    ],
+
+    'production' => [
+        // Use SMTP in production
+        'transportType' => 'craft\\mail\\transportadapters\\Smtp',
+        'transportSettings' => [
+            'host' => App::env('CRAFT_SMTP_HOST'),
+            'port' => App::env('CRAFT_SMTP_PORT') ?: 587,
+            'useAuthentication' => true,
+            'username' => App::env('CRAFT_SMTP_USERNAME'),
+            'password' => App::env('CRAFT_SMTP_PASSWORD'),
+            'encryptionMethod' => 'tls',
+        ],
+    ],
+];

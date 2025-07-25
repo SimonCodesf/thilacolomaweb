@@ -1,3 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/templates/nieuws/_entry.twig {"mtime":1753350978620,"ctime":1753350978289,"size":1945,"etag":"3eijnrgd320n","orphaned":false,"typeId":""}
 {% extends "_layouts/base.twig" %}
 
 {% set title = entry.title %}

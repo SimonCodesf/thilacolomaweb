@@ -1,0 +1,4 @@
+file:///Users/simon/Documents/GitHub/thilacolomaweb/craft/storage/.gitignore {"mtime":1753350899238,"ctime":1753350899019,"size":38,"etag":"3eijno91n17","orphaned":false,"typeId":""}
+# Craft CMS Directories
+*
+!.gitignore

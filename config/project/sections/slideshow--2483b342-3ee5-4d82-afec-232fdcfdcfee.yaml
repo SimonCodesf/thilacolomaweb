@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: d3d80e9e-98b3-43bd-a4f5-5a33881ec53e # slideshow
+    uid: d3d80e9e-98b3-43bd-a4f5-5a33881ec53e
 handle: slideshow
 maxAuthors: 1
 name: Slideshow
