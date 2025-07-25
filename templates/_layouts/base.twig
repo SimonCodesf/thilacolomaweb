@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+    <meta name="description" content="{% if metaDescription is defined %}{{ metaDescription }}{% else %}Thila Coloma is de 5de grootste scoutsgroep van Vlaanderen, gevestigd in Mechelen sinds 1975. Meer dan 400 jongeren voelen zich bij ons thuis.{% endif %}">
+    
+    {# SEO Meta Tags #}
+    {% if canonicalUrl is defined %}
+        <link rel="canonical" href="{{ canonicalUrl }}">
+    {% endif %}
+    
+    <meta property="og:title" content="{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}">
+    <meta property="og:description" content="{% if metaDescription is defined %}{{ metaDescription }}{% else %}Thila Coloma is de 5de grootste scoutsgroep van Vlaanderen, gevestigd in Mechelen sinds 1975.{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ siteUrl }}{{ craft.app.request.pathInfo }}">
+    {% if ogImage is defined %}
+        <meta property="og:image" content="{{ ogImage }}">
+    {% endif %}
+    
+    {# CSS Files #}
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/variables.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/slideshow.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/navigation.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/pages.css') }}">
+    <link rel="stylesheet" href="{{ alias('@web/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="https://use.typekit.net/rae0xxq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    {# Additional CSS Block #}
+    {% block css %}{% endblock %}
+</head>
+<body class="{% block bodyClass %}{% endblock %}">
+    {% block content %}{% endblock %}
+    
+    {# JavaScript Files #}
+    <script src="{{ alias('@web/assets/js/slideshow.js') }}"></script>
+    <script src="{{ alias('@web/assets/js/news-slideshow.js') }}"></script>
+    
+    {# Additional JavaScript Block #}
+    {% block js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,174 @@
+{% extends "_layouts/base.twig" %}
+
+{% set title = "Nieuws & Evenementen" %}
+{% set metaDescription = "Ontdek het laatste nieuws en aankomende evenementen van Thila Coloma scoutsgroep Mechelen." %}
+
+{% block content %}
+<div class="news-container">
+    <header class="news-header">
+        <h1>Nieuws & Evenementen</h1>
+        <p>Blijf op de hoogte van alle activiteiten en gebeurtenissen bij Thila Coloma.</p>
+    </header>
+    
+    <main class="news-content">
+        {% set newsEntries = craft.entries.section('news').orderBy('postDate desc').all() %}
+        
+        {% if newsEntries|length %}
+            <div class="news-grid">
+                {% for entry in newsEntries %}
+                    <article class="news-card">
+                        {% if entry.newsImage|length %}
+                            <div class="news-card-image">
+                                <img src="{{ entry.newsImage.one().url }}" alt="{{ entry.newsImage.one().alt }}">
+                            </div>
+                        {% endif %}
+                        
+                        <div class="news-card-content">
+                            <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+                            
+                            <div class="news-meta">
+                                <time datetime="{{ entry.postDate|date('Y-m-d') }}">
+                                    {{ entry.postDate|date('d F Y') }}
+                                </time>
+                            </div>
+                            
+                            <div class="news-excerpt">
+                                {{ entry.newsExcerpt ?? entry.newsContent|striptags|slice(0, 200) }}
+                            </div>
+                            
+                            <a href="{{ entry.url }}" class="read-more">Lees meer →</a>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="no-news">
+                <h2>Geen nieuws beschikbaar</h2>
+                <p>Er zijn momenteel geen nieuwsberichten gepubliceerd.</p>
+            </div>
+        {% endif %}
+    </main>
+    
+    <nav class="news-navigation">
+        <a href="{{ siteUrl }}" class="back-home">← Terug naar home</a>
+    </nav>
+</div>
+
+<style>
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.news-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 1.5rem;
+}
+
+.news-card-content h2 {
+    margin-bottom: 1rem;
+}
+
+.news-card-content h2 a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.news-card-content h2 a:hover {
+    color: var(--primary-color);
+}
+
+.news-meta {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.news-excerpt {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.no-news {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--gray-color);
+}
+
+.news-navigation {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.back-home {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        padding: 1rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+</style>
+{% endblock %}

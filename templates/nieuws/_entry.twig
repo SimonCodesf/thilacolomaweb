@@ -1,0 +1,193 @@
+{% extends "_layouts/base.twig" %}
+
+{% set title = entry.title %}
+{% set metaDescription = entry.newsExcerpt ?? entry.newsContent|striptags|slice(0, 160) %}
+
+{% block content %}
+<article class="news-detail">
+    <header class="news-header">
+        <h1>{{ entry.title }}</h1>
+        
+        <div class="news-meta">
+            <time datetime="{{ entry.postDate|date('Y-m-d') }}">
+                {{ entry.postDate|date('d F Y') }}
+            </time>
+        </div>
+    </header>
+    
+    {% if entry.newsImage|length %}
+        <div class="news-hero-image">
+            <img src="{{ entry.newsImage.one().url }}" alt="{{ entry.newsImage.one().alt }}">
+        </div>
+    {% endif %}
+    
+    <div class="news-content">
+        {{ entry.newsContent }}
+    </div>
+    
+    {% if entry.newsGallery|length %}
+        <div class="news-gallery">
+            <h2>Foto's</h2>
+            <div class="gallery-grid">
+                {% for image in entry.newsGallery.all() %}
+                    <div class="gallery-item">
+                        <img src="{{ image.url }}" alt="{{ image.alt }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    
+    <nav class="article-navigation">
+        <a href="{{ url('nieuws') }}" class="back-to-news">← Terug naar nieuws</a>
+        
+        {% set nextEntry = craft.entries.section('news').id('not ' ~ entry.id).after(entry).one() %}
+        {% set prevEntry = craft.entries.section('news').id('not ' ~ entry.id).before(entry).one() %}
+        
+        <div class="next-prev">
+            {% if prevEntry %}
+                <a href="{{ prevEntry.url }}" class="prev-article">← {{ prevEntry.title }}</a>
+            {% endif %}
+            
+            {% if nextEntry %}
+                <a href="{{ nextEntry.url }}" class="next-article">{{ nextEntry.title }} →</a>
+            {% endif %}
+        </div>
+    </nav>
+</article>
+
+<style>
+.news-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.news-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.news-meta {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.news-hero-image {
+    margin-bottom: 2rem;
+}
+
+.news-hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-content {
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.news-content h2, .news-content h3 {
+    color: var(--dark-color);
+    margin: 2rem 0 1rem 0;
+}
+
+.news-content p {
+    margin-bottom: 1rem;
+}
+
+.news-gallery {
+    margin-bottom: 3rem;
+}
+
+.news-gallery h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.article-navigation {
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.back-to-news {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.back-to-news:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.next-prev {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.prev-article, .next-article {
+    color: var(--gray-color);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.prev-article:hover, .next-article:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .news-detail {
+        padding: 1rem;
+    }
+    
+    .news-hero-image img {
+        height: 250px;
+    }
+    
+    .next-prev {
+        flex-direction: column;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+</style>
+{% endblock %}
